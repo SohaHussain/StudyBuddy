@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <!-- POST for taking response and action is set to empty to take response to the current url -->
+    <form method = "POST" action = ""> 
+        <!-- we need to pass this token in django whenever we are taking POST requests -->
+        {% csrf_token %}
+        <!-- wraps a paragraph tag around each input field of the form -->
+        {{form.as_p}}
+        <input type="submit" value="Submit"  />
+
+    </form>
+</div>
+
+{% endblock content %}
