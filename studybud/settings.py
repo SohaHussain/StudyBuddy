@@ -133,6 +133,7 @@ MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # tells where to upload user proflie pictures
 MEDIA_ROOT = BASE_DIR/'static/images'
